@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { Form, Button} from 'react-bootstrap'
+
 
 export default function Search() {
 
@@ -26,14 +28,14 @@ export default function Search() {
     }
 
     return (
-        <div>
-            <input type="text" placeholder='Search Card Name' name='cardName' value={searchBoxes.cardName} onChange={handleInputChange} />
-            <input type="text" placeholder='Search Type' name='type' value={searchBoxes.type} onChange={handleInputChange} />
-            <input type="text" placeholder='Search Subtype' name='subtype' value={searchBoxes.subtype} onChange={handleInputChange} />
-            <input type="text" placeholder='Search Set' name='set' value={searchBoxes.set} onChange={handleInputChange} />
-            <input type="text" placeholder='Search Text' name='text' value={searchBoxes.text} onChange={handleInputChange} />
-            <input type='number' placeholder='Search Mana Value' name='cmc' value={searchBoxes.cmc} onChange={handleInputChange} />
-            <button onClick={consoleLogError}>Console Error</button>
-        </div>
+        <Form>
+            <Form.Control type="text" placeholder='Search Card Name' name='cardName' value={searchBoxes.cardName} onChange={handleInputChange} />
+            <Form.Control type="text" placeholder='Search Type' name='type' value={searchBoxes.type} onChange={handleInputChange} />
+            <Form.Control type="text" placeholder='Search Subtype' name='subtype' value={searchBoxes.subtype} onChange={handleInputChange} />
+            <Form.Control type="text" placeholder='Search Set' name='set' value={searchBoxes.set} onChange={handleInputChange} />
+            <Form.Control type="text" placeholder='Search Text' name='text' value={searchBoxes.text} onChange={handleInputChange} />
+            <Form.Control type='number' placeholder='Search Mana Value' name='cmc' value={searchBoxes.cmc} onChange={handleInputChange} />
+            <Button onClick={consoleLogError}>Console Error</Button>
+        </Form>
     )
 }
